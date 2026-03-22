@@ -7,6 +7,7 @@ import java.io.FileReader;
 public class CerealRunner
 {
     // create a private instance variable to store an ArrayList of Cereal objects
+    ArrayList <Cereal> cereals = new ArrayList<>();
 
     public CerealRunner(String fileName)
     {
@@ -19,6 +20,13 @@ public class CerealRunner
             while(scan.hasNext())
             {
                 String myStr = scan.nextLine();
+
+                String [] data = myStr.split(",");
+                 name = data[0];
+                calories = data[1];
+                fiber = data[2];
+                carbs = data[3];
+                cups = data[4];
 
                 // use the split method to parse the data into an array of
                 //   String objects
